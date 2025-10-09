@@ -11,8 +11,8 @@ botonPersonaje.onclick = function () {
     .then(personaje => {
        console.log(personaje)
         tituloPersonaje.textContent = personaje.data.attributes.name;
-        contenedorPersonajes.innerHTML = <h1>${personaje.data.attributes.alias}</h1>
-        parrafoPersonaje.textContent = personaje.description
+        contenedorPersonajes.innerHTML = `<h1>${personaje.data.attributes.alias}</h1>   <img src="personaje.data.attributes.image_hdurl" alt="">`
+        parrafoPersonaje.textContent = personaje.data.attributes.description
     });
 
 }
