@@ -10,9 +10,17 @@ botonPersonaje.onclick = function () {
     .then(res => res.json())
     .then(personaje => {
        console.log(personaje)
+       const imagen = personaje.data.attributes.image_url
         tituloPersonaje.textContent = personaje.data.attributes.name;
-        contenedorPersonajes.innerHTML = `<h1>${personaje.data.attributes.alias}</h1>   <img src="personaje.data.attributes.image_hdurl" alt="">`
-        parrafoPersonaje.textContent = personaje.data.attributes.description
+        contenedorPersonajes.innerHTML = `<h1>${personaje.data.attributes.alias}</h1>   
+        <p>Alive: ${personaje.data.attributes.alive}</p>
+        <p>Role: ${personaje.data.attributes.role}</p>
+        <p>Description: ${personaje.data.attributes.description}</p>
+        <p>Creator: ${personaje.data.attributes.creator}</p>
+        <p>First appearance: ${personaje.data.attributes.first_appearance}</p>
+        <p>Abilities: ${personaje.data.attributes.abilities}</p>
+        <img src="${imagen}" alt="">`
+     
     });
 
 }
