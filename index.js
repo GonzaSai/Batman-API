@@ -14,12 +14,14 @@ botonPersonaje.onclick = function () {
         tituloPersonaje.textContent = personaje.data.attributes.name;
         tituloPersonaje.style.color = "blue";
         contenedorPersonajes.innerHTML = `<h1 class="paragraph">${personaje.data.attributes.alias}</h1>   
-        <p class="paragraph">Alive: ${personaje.data.attributes.alive}</p>
-        <p class="paragraph">Role: ${personaje.data.attributes.role}</p>
-        <p class="paragraph">Description: ${personaje.data.attributes.description}</p>
-        <p class="paragraph">Creator: ${personaje.data.attributes.creator}</p>
-        <p class="paragraph">First appearance: ${personaje.data.attributes.first_appearance}</p>
-        <p class="paragraph">Abilities: ${personaje.data.attributes.abilities}</p>`
+        <ul>
+        <li class="paragraph">Alive: ${personaje.data.attributes.alive}</li>
+        <li class="paragraph">Role: ${personaje.data.attributes.role}</li>
+        <li class="paragraph">Description: ${personaje.data.attributes.description}</li>
+        <li class="paragraph">Creator: ${personaje.data.attributes.creator}</li>
+        <li class="paragraph">First appearance: ${personaje.data.attributes.first_appearance}</li>
+        <li class="paragraph">Abilities: ${personaje.data.attributes.abilities}</li>
+        </ul> `
         let parrafoPersonaje = document.querySelectorAll('.paragraph') 
         parrafoPersonaje.forEach(p => {
         p.style.color = "blue";
@@ -32,10 +34,10 @@ botonPersonaje.onclick = function () {
           <ul> 
            <li class="paragraph">Alive: ${personaje.data.attributes.alive}</li>
             <li class="paragraph">Role: ${personaje.data.attributes.role}</li>
-            <liclass="paragraph">Description: ${personaje.data.attributes.description}</li>
-            <liclass="paragraph">Creator: ${personaje.data.attributes.creator}</li>
-            <liclass="paragraph">First appearance: ${personaje.data.attributes.first_appearance}</li>
-            <liclass="paragraph">Abilities: ${personaje.data.attributes.abilities}</li>
+            <li class="paragraph">Description: ${personaje.data.attributes.description}</li>
+            <li class="paragraph">Creator: ${personaje.data.attributes.creator}</li>
+            <li class="paragraph">First appearance: ${personaje.data.attributes.first_appearance}</li>
+            <li class="paragraph">Abilities: ${personaje.data.attributes.abilities}</li>
           </ul>`
         let parrafoPersonaje = document.querySelectorAll('.paragraph') 
         parrafoPersonaje.forEach(p => {
@@ -44,13 +46,15 @@ botonPersonaje.onclick = function () {
         }else{
                  tituloPersonaje.textContent = personaje.data.attributes.name;
         tituloPersonaje.style.color = "gray";
-        contenedorPersonajes.innerHTML = `<h1 class="paragraph">${personaje.data.attributes.alias}</h1>   
-        <p class="paragraph">Alive: ${personaje.data.attributes.alive}</p>
-        <p class="paragraph">Role: ${personaje.data.attributes.role}</p>
-        <p class="paragraph">Description: ${personaje.data.attributes.description}</p>
-        <p class="paragraph">Creator: ${personaje.data.attributes.creator}</p>
-        <p class="paragraph">First appearance: ${personaje.data.attributes.first_appearance}</p>
-        <p class="paragraph">Abilities: ${personaje.data.attributes.abilities}</p>`
+        contenedorPersonajes.innerHTML = `<h1 class="paragraph">${personaje.data.attributes.alias}</h1>
+        <ul>   
+        <li class="paragraph">Alive: ${personaje.data.attributes.alive}</li>
+        <li class="paragraph">Role: ${personaje.data.attributes.role}</li>
+        <li class="paragraph">Description: ${personaje.data.attributes.description}</li>
+        <li class="paragraph">Creator: ${personaje.data.attributes.creator}</li>
+        <li class="paragraph">First appearance: ${personaje.data.attributes.first_appearance}</li>
+        <li class="paragraph">Abilities: ${personaje.data.attributes.abilities}</li>
+        </ul>`
         let parrafoPersonaje = document.querySelectorAll('.paragraph') 
         parrafoPersonaje.forEach(p => {
         p.style.color = "gray";
@@ -60,8 +64,3 @@ botonPersonaje.onclick = function () {
     });
 
 }
-
-const tituloRandom = document.querySelector('#title2')
-const botonRandom = document.querySelector('#button2')
-const contenedorRandom = document.querySelector('#characters2')
-const numeroPersonaje = document.querySelector('.number2')
